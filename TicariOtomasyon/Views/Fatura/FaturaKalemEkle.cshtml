@@ -1,0 +1,30 @@
+﻿@model TicariOtomasyon.Models.Siniflar.FaturaKalem
+
+@{
+    ViewBag.Title = "FaturaKalemEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Fatura Kalem Ekleme Sayfası</h2>
+
+
+<form class="form-group" action="/Fatura/FaturaKalemEkle" method="post">
+    @Html.LabelFor(x => x.Miktar)
+    @Html.TextBoxFor(x => x.Miktar, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BirimFiyat)
+    @Html.TextBoxFor(x => x.BirimFiyat, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tutar)
+    @Html.TextBoxFor(x => x.Tutar, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.FaturaID)
+    @Html.TextBoxFor(x => x.FaturaID, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info"><i class="fa fa-plus"></i> Ekle</button>
+
+</form>

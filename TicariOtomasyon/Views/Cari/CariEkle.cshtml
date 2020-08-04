@@ -1,0 +1,24 @@
+﻿@model TicariOtomasyon.Models.Siniflar.Cariler
+@{
+    ViewBag.Title = "CariEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>CARI EKLEME SAYFASI</h2>
+<br />
+
+<form class="form-group" action="/Cari/CariEkle" method="post">
+    @Html.Label("Ad:")
+    @Html.TextBoxFor(x => x.CariAd, new { @class = "form-control" })
+    <br />
+    @Html.Label("Soyad:")
+    @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şehir:")
+    @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
+    <br />
+    @Html.Label("E-posta:")
+    @Html.TextBoxFor(x => x.CariMail, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info"><i class="fa fa-plus"></i> Ekle</button>
+</form>

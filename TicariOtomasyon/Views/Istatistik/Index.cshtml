@@ -1,0 +1,209 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Custom Theme files -->
+    <link href="~/web2/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <script src="~/web2/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/web2/css/font-awesome.css">
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Metro Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--webfont-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <script src="js/zingchart.min.js"></script>
+    <script src="js/zingchart.jquery.js"></script>
+    <script src="js/jquery.easydropdown.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+
+    <link href="css/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+    <script src="~/web2/js/easyResponsiveTabs.js" type="text/javascript"></script>
+
+    <link href="~/web2/css/nav.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/web2/js/main.js"></script> <!-- Resource jQuery -->
+    <!-- chart -->
+    <script src="~/web2/js/Chart1.js"></script>
+    <!-- //chart -->
+</head>
+<body>
+    <div class="total-content">
+        <div class="list_of_members">
+            <div class="sales" style="background-color:#1abc9c">
+                <div class="icon-text">
+                    <h3>@ViewBag.d1</h3>
+                    <p><i class="fas fa-users"></i> Toplam Cari</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="new-users" style="background-color:#2ecc71">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d2</h3>
+                    <p><i class="fas fa-archive"></i> Ürün Sayısı</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="orders" style="background-color:#3498db">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d3</h3>
+                    <p><i class="fas fa-user-tie"></i> Personel Sayısı</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="visitors" style="background-color:#9b59b6">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d4</h3>
+                    <p><i class="fas fa-align-justify"></i> Kategori Sayısı</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="total-content">
+        <div class="list_of_members">
+            <div class="sales" style="background-color:#16a085">
+                <div class="icon-text">
+                    <h3>@ViewBag.d5</h3>
+                    <p><i class="fas fa-layer-group"></i> Toplam Stok</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="new-users" style="background-color:#27ae60">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d6</h3>
+                    <p><i class="fab fa-modx"></i> Marka Sayısı</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="orders" style="background-color:#2980b9">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d7</h3>
+                    <p><i class="fas fa-grimace"></i> Kritik Seviye</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="visitors" style="background-color:#8e44ad">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d8</h3>
+                    <p><i class="fas fa-sort-up"></i> Max Fiyatlı Ürün</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+    <div class="clearfix"></div>
+
+    <div class="total-content">
+        <div class="list_of_members">
+            <div class="sales" style="background-color:#f1c40f">
+                <div class="icon-text">
+                    <h3>@ViewBag.d9</h3>
+                    <p><i class="fas fa-sort-down"></i> Min Fiyatlı Ürün</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="new-users" style="background-color:#e67e22">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d10</h3>
+                    <p><i class="fas fa-sort-up"></i> Max Marka</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="orders" style="background-color:#e74c3c">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d11</h3>
+                    <p><i class="fas fa-refrigerator"></i> Buzdolabı Sayısı</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="visitors" style="background-color:#95a5a6">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d12</h3>
+                    <p><i class="fas fa-laptop"></i> Laptop Sayısı</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="total-content">
+        <div class="list_of_members">
+            <div class="sales" style="background-color:#f39c12">
+                <div class="icon-text">
+                    <h3>@ViewBag.d13</h3>
+                    <p><i class="fas fa-star"></i> En Çok Satan</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="new-users" style="background-color:#d35400">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d14</h3>
+                    <p><i class="fas fa-dollar-sign"></i> Kasadaki Tutar</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="orders" style="background-color:#c0392b">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d15</h3>
+                    <p><i class="fas fa-file-invoice-dollar"></i> Bugünkü Satşlar</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            @*<div class="visitors" style="background-color:#7f8c8d">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.d16</h3>
+                    <p><i class="fas fa-lira-sign"></i> Bugünkü Kasa</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>*@
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</body>
+</html>
+

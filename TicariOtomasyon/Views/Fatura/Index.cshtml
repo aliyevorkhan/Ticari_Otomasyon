@@ -1,0 +1,59 @@
+﻿@using TicariOtomasyon.Models.Siniflar
+@model List<Fatura>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2 style="margin-top:20px">FATURALAR</h2>
+
+<table id="tbl1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Fatura ID</th>
+            <th>Seri No</th>
+            <th>Sıra No</th>
+            <th>Tarih</th>
+            <th>Vergi Dairesi</th>
+            <th>Saat</th>
+            <th>Teslim Alan</th>
+            <th>Teslim Eden</th>
+            <th>Toplam</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    @foreach (var m in Model)
+    {
+        <tr>
+
+            <td>@m.FaturaID</td>
+            <td>@m.FaturaSeriNo</td>
+            <td>@m.FaturaSiraNo</td>
+            <td>@m.Tarih</td>
+            <td>@m.VergiDairesi</td>
+            <td>@m.Saat</td>
+            <td>@m.TeslimAlan</td>
+            <td>@m.TeslimEden</td>
+            <td>@m.Toplam</td>
+            <td>
+                <a href="/Fatura/FaturaGetir/@m.FaturaID" class="btn btn-warning"><i class="fa fa-undo"></i> Güncelle</a>
+                <a href="/Fatura/FaturaDetay/@m.FaturaID" class="btn btn-info"><i class="fa fa-info"></i> Detaylar</a>
+            </td>
+        </tr>
+
+    }
+</table>
+<br />
+<br />
+
+<a href="/Fatura/FaturaEkle" class="btn btn-primary"><i class="fa fa-plus"></i> Yeni Fatura Ekle</a>
+<a href="/Fatura/FaturaListesi" class="btn btn-info"><i class="fa fa-print"></i> Yazdır</a>
+
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+<script>
+    $('#tbl1').dataTable({});
+</script>

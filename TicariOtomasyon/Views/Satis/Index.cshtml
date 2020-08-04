@@ -1,0 +1,58 @@
+﻿@using TicariOtomasyon.Models.Siniflar
+@model List<SatisHaraket>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2 style="margin-top:20px">SATIŞLAR</h2>
+
+<table id="tbl1" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Cari</th>
+            <th>Personel</th>
+            <th>Ürün</th>
+            <th>Adet</th>
+            <th>Fiyat</th>
+            <th>Toplam Tutar</th>
+            <th>Tarih</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    @foreach (var m in Model)
+    {
+        <tr>
+
+            <td>@m.SatisID</td>
+            <td>@m.Cariler.CariAd @m.Cariler.CariSoyad</td>
+            <td>@m.Personel.PersonelAd @m.Personel.PersonelSoyad</td>
+            <td>@m.Urun.UrunAd</td>
+            <td>@m.Adet</td>
+            <td>@m.Fiyat</td>
+            <td>@m.ToplamTutar</td>
+            <td>@m.Tarih.ToShortDateString()</td>
+            <td>
+                <a href="/Satis/SatisGetir/@m.SatisID" class="btn btn-warning"><i class="fa fa-undo"></i> GÜNCELLE</a>
+                <a href="/Satis/SatisDetay/@m.SatisID" class="btn btn-info"><i class="fa fa-info-circle"></i> Detay</a>
+            </td>
+        </tr>
+
+    }
+
+</table>
+<br />
+<br />
+<a href="/Satis/SatisEkle" class="btn btn-primary"><i class="fa fa-plus"></i>Yeni Satış Yap</a>
+<a href="/Satis/SatisListesi" class="btn btn-info"><i class="fa fa-print"></i> Yazdır</a>
+
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+<script>
+    $('#tbl1').dataTable({});
+
+</script>

@@ -1,0 +1,34 @@
+﻿@model TicariOtomasyon.Models.Siniflar.SatisHaraket
+@{
+    ViewBag.Title = "SatisGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+
+<h2>Satis Guncelleme Sayfasi</h2>
+<br />
+
+@using (Html.BeginForm("SatisGuncelle", "Satis", FormMethod.Post))
+{
+    @Html.Label("Cari:")
+    @Html.DropDownListFor(x => x.CariID, (List<SelectListItem>)ViewBag.cari, new { @class = "form-control" })
+    <br />
+    @Html.Label("Personel:")
+    @Html.DropDownListFor(x => x.PersonelID, (List<SelectListItem>)ViewBag.personel, new { @class = "form-control" })
+    <br />
+    @Html.Label("Urun:")
+    @Html.DropDownListFor(x => x.UrunID, (List<SelectListItem>)ViewBag.urun, new { @class = "form-control" })
+    <br />
+    @Html.Label("Adet:")
+    @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })
+    <br />
+    @Html.Label("Fiyat:")
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Toplam Tutar:")
+    @Html.TextBoxFor(x => x.ToplamTutar, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.SatisID)
+
+    <br />
+    <button class="btn btn-info"><i class="fa fa-undo"></i> Güncelle</button>
+}

@@ -1,0 +1,22 @@
+﻿@model TicariOtomasyon.Models.Siniflar.Kategori
+
+@{
+    ViewBag.Title = "KategoriEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Kategori Ekleme Sayfası</h2>
+<br />
+
+<form class="form-group" action="/Kategori/KategoriEkle" method="post">
+    <div class="form-group">
+        <label>Kategori Adı:</label>
+        <input type="text" class="form-control" name="KategoriAd" />
+    </div>
+
+    <div class="form-row">
+        <button class="btn btn-info"><i class="fa fa-plus"></i> Ekle</button>
+    </div>
+
+</form>

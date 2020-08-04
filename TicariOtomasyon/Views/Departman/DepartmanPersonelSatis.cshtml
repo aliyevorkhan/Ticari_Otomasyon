@@ -1,0 +1,39 @@
+﻿@using TicariOtomasyon.Models.Siniflar
+@model List<SatisHaraket>
+
+@{
+    ViewBag.Title = "DepartmanPersonelSatis";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+
+<h2>Departman Personel Satis</h2>
+<br />
+
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Personel Adı: @ViewBag.personel</li>
+</ol>
+
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Cari</th>
+        <th>Ürün</th>
+        <th>Adet</th>
+        <th>Fiyat</th>
+        <th>Toplam Tutar</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.SatisID</td>
+            <td>@m.Cariler.CariAd @m.Cariler.CariSoyad</td>
+            <td>@m.Urun.UrunAd</td>
+            <td>@m.Adet</td>
+            <td>@m.Fiyat</td>
+            <td>@m.ToplamTutar</td>
+            <td>@m.Tarih.ToShortDateString()</td>
+        </tr>
+    }
+</table>

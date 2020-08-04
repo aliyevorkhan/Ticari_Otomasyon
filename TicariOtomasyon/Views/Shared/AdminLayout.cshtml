@@ -1,0 +1,78 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Static Navigation - SB Admin</title>
+    <link href="~/Web/dist/css/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Ticari Otomasyon</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#">
+            <i class="fas fa-bars"></i>
+        </button><!-- Navbar Search-->
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">İşlemler</div>
+                        <a class="nav-link" href="/Kategori/Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Kategoriler
+                        </a>
+                        <a class="nav-link" href="/Urun/Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-flask"></i></div>
+                            Ürünler
+                        </a>
+                        <a class="nav-link" href="/Departman/Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-bars"></i></div>
+                            Departmanlar
+                        </a>
+                        <a class="nav-link" href="/Cari/Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                            Cariler
+                        </a>
+                        <a class="nav-link" href="/Personel/Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                            Personeller
+                        </a>
+                        <a class="nav-link" href="/Satis/Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tags"></i></div>
+                            Satışlar
+                        </a>
+
+                        <a class="nav-link" href="/Istatistik/Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-signal"></i></div>
+                            Istatistikler
+                        </a>
+                    </div>
+                </div>
+                
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </main>
+            
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="~/Web/dist/js/scripts.js"></script>
+</body>
+</html>
